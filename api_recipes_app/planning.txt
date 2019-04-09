@@ -1,0 +1,15 @@
+--plan out the basics of the app
+--plan out relationships of components
+--understand how the components work
+--plan out automated testing for this
+
+
+What I'm building: 
+	- an app that allows users to search for recipes via an API, which displays the recipes one at a time. 
+	- the user can click on a button which saves the recipe to favorites.
+	- the user can search their favorites in the same way they'd search the main recipes, except it displays only their favorites
+	- users can add or remove favorite recipes on the individual recipes portion.
+
+
+
+	install packages: bootstrap (css), react-router-dom
