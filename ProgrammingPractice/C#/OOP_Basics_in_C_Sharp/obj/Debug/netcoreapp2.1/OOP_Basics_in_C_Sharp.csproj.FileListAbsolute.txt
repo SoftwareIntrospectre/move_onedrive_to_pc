@@ -1,0 +1,11 @@
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\bin\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.deps.json
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\bin\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.runtimeconfig.json
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\bin\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.runtimeconfig.dev.json
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\bin\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.dll
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\bin\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.pdb
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\obj\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.csprojAssemblyReference.cache
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\obj\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.csproj.CoreCompileInputs.cache
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\obj\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.AssemblyInfoInputs.cache
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\obj\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.AssemblyInfo.cs
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\obj\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.dll
+C:\Users\Tony Chacon\ProgrammingPractice\C#\OOP_Basics_in_C_Sharp\obj\Debug\netcoreapp2.1\OOP_Basics_in_C_Sharp.pdb
