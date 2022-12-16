@@ -13,4 +13,3 @@ if ["$file_diff" != ""]
 then
 	echo "The directory was modified"
 fi
-
