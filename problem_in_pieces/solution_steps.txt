@@ -1,0 +1,76 @@
+The issue I'm having is that I'm stuck on how to compare files with variables. I've been stuck there too long, so now I'm going to break the project down into chunks so I can actually progress.
+
+There is a solution. I just haven't done it yet. 
+
+It's important that I finish this because I want to build competence, confidence, and momentum with my career. I need to empower myself to complete these side projects, to prove to myself that I can do it. I'm going to prove that believing in myself is warranted, and that worrying/overthinking is no longer necessary.
+
+--============================================================================================================================================================
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+What I Want:
+* To write a program that compares the exact same named-files in both my Documents folder and One Drive/Documents folder
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+* To prove to myself that I can create a program from scratch, so that I can put it as a porfolio piece
+	- Why: I want to become a highly paid software engineer, doing what I enjoy as a creative, pursuing my dreams and achieving them.
+
+* To become skilled at Bash scripting, so that I can have mastery over that tool.
+	- Why: Useful for creating ad-hoc scripts that are excellent at file management
+		--Example: Working in Linux at my next job would be way easier if I'm good at Bash scripting.
+
+* To become a more efficient problem solver
+	- Why 1: I want to achieve more with less effort/time.
+	- Why 2: I want to have more fun being creative than stuck
+
+* To become someone who enjoys creating and completing working software
+	- Why: This will give me confidence, competence, and leverage in my career as a software engineer
+
+* To become someone who just get things done with minimal worry
+	- Why: Because I'm done with overthinking/overplanning
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Problems That's Come Up So Far:
+-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* Comparing filepaths with spaces doesn't play well
+	- Bash is really stupid when it comes to "Directory Name" situations because the space doesn't jive with it.
+		-- Bash and Windows don't seem to go together very well, but I'll figure it out.
+
+* Lull in the middle of the project, bored of it.
+	- Answer: Accept that this is normal. Stick with it and see it through.
+
+* Losing confidence from not making progress.
+	- Answer: Accept that learning new stuff comes with challenges, and it won't be easy. It's worth it BECAUSE I'm struggling. That's why it's worth it.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Manual Steps (Recipe)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Goal 1: To get the most recent versions of files from OneDrive and put them onto C Drive (local machine). 
+Goal 2: To delete the redundant and outdated files from OneDrive after copying
+
+* Take in base directory 1 as input
+* Take in base directory 2 as input
+* Compare the two and find files that share the same name and file extension
+	-  If a match is found in both places, compare the contents of each file
+		-- If the files are identical, check to see which is the more recent file
+			** If OneDrive file is more recent ---> function: update_c_drive()
+
+				update_c_drive():
+				* create a copy of the file
+				* copy contents of current file
+								* overwrite contents of other file with current file
+				* function: delete_old_file()
+
+				delete_old_file():
+				* ensure update_c_drive() happened first
+				* if so: delete file from OneDrive
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Manual Steps (Simple Example)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+* 
+
+
+
+--============================================================================================================================================================
+
