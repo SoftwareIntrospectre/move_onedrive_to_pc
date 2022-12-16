@@ -1,0 +1,51 @@
+What: Create a program that recursively moves files from my Microsoft OneDrive to my local machine.
+What 2: Program that keeps track of how much memory this costs to do, and an estimate of how long it will take.
+
+Why: I'm tired of MS OneDrive, and I want to get rid of it...but I also want to guarantee that all of my files are maintained.
+Why 2: This seems like a fun/useful way to apply my knowledge of BASH scripting and Grep. :D
+Why 3: This will be the first program I made from scratch written in the Vim editor (extension in VS Code...because I need to use my files on Windows for this)
+
+Planning:
+====================================================================================================
+1. Use BASH script to search my base OneDrive directory for all files
+2. Use cat and grep to find all files that exist on OneDrive that also exist on C:/ drive.
+	2A. If C:/ version is older than OneDrive version, overwrite with OneDrive version
+		2B. Delete OneDrive version from OneDrive once overwriting is completed
+
+
+3. Use BASH to keep track of how much memory is being used
+	3A. Use Bash to check how many (KB/MB/GB) are used in OneDrive
+	3B. Use Bash to check how many (KB/MB/GB) are used in C drive
+	3C. Use Bash to keep track of percentage of memory is free
+
+
+search \c\Users\Tony\ Chacon
+- grep list of all files in that
+
+search \c\Users\Tony\ Chacon\OneDrive
+- grep list of all files in that
+
+	- compare the filenames, modified_date
+		--> choose the higher of the two
+			--> if equal, use the regular (non-OneDrive) version
+
+	- set to run on a schedule (daily)
+
+	- send report of delta
+
+	- set OneDrive to ignore the OneDrive
+
+
+11/10/2022 - using the following commands to find a test file in both Documents and OneDrive/Documents:
+
+$ find ~/Documents ~/OneDrive/Documents -type f -name  "test_File_For_BASH.txt"
+/c/Users/Tony Chacon/Documents/_Me/test_File_For_BASH.txt
+/c/Users/Tony Chacon/OneDrive/Documents/_Me/test_File_For_BASH.txt
+
+Will use this for test purposes.
+
+
+12/15/2022 - All I had to do was wrap the variables in quotes and it ignored the whitespace in the filepath. smh
+
+
+12/16/2022 - find a way to compare files within the same directory (difference between OneDrive and Documents is that I need to ignore the "OneDrive" portion of it.)
