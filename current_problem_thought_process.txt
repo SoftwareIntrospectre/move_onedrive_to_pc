@@ -1,0 +1,53 @@
+12/16/2022: 
+
+Problem: Create a way to compare two files of the same name in the same equivalent directory.
+
+Why 1: I can do this when I search for a file, but I want to loop and extend this behavior to all files.
+
+File Structure:
+	Local: "~/Documents" --> from there
+	OneDrive: "~/OneDrive/Documents" --> the same from there
+		Meaning: OneDrive needs to go down one directory to the "Documents" folder, then should be the same.
+
+
+Sub-Problem 1: Find a base file to search for in OneDrive, then have that be the "base-case" to search for.
+	"How do I know what to search for?"
+		- need some sort of starting point
+
+
+Sub-Problem 2: Once file is found, store that location in memory.
+	- Check to see if file exists in identical directory in C: Drive
+
+		- if it does, compare OneDrive's file to C Drive's file
+
+---------------------------------------------------------------------
+
+For later: Create function to determine what should happen for:
+
+	Scenario A: OneDrive file and C Drive file are identical
+		Condition 1: file name is exactly the same
+		Condition 2: file extension is exactly the same
+		Condition 3: file content is exactly the same
+		Condition 4: files date last modified are exactly the same
+
+	Scenario B: OneDrive's file is newer
+		Meaning: OneDrive's file.DateLastModified > C Drive file.DateLastModified
+
+	Scenario C: C Drive's file  is newer
+		 Meaning:  C Drivefile.DateLastModified > OneDrive's file.DateLastModified
+
+
+Scenario A function: 
+	if A1-A4 conditions are true:
+		log("Files are identical. No change required.")
+
+Scenario B function:
+	if OneDrive.file.date_last_modified > cDrive.file.date_last_modified:
+		log("Updating C Drive file with OneDrive's contents")
+		replace cDrive.file with OneDrive.file
+		delete original OneDrive.file
+
+Scenario C function:
+	if CDrive.file.date_last_modified > OneDrive.file.date_last_modified:
+		log("OneDrive is out of date. No longer needed. Deleting it.")
+		replace cDrive.file with OneDrive.file
