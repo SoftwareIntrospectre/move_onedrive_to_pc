@@ -4,8 +4,13 @@ local_file=$(find ~/Documents -type f -name 'test_File_For_BASH__replacement_tes
 
 oneDrive_file=$(find ~/OneDrive/Documents -type f -name 'test_File_For_BASH__replacement_test.txt')
 
-cat "$oneDrive_file"  > "$local_file"
 
-#echo $local_file
+if !  diff -rq "$local_file" "$oneDrive_file";
+then
+	echo "They differ"
+	cat "$oneDrive_file"  > "$local_file"
+	echo "OneDrive file overwriting Local File"
 
-#echo $oneDrive_file
+else
+	echo "Local File not overwritten. Newer."
+fi
