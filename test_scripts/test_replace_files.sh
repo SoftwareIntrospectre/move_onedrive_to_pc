@@ -11,13 +11,21 @@ updateLocalFileToCurrentVersion(){
 	oneDrive_file=$2
 
 	echo $local_file
-	echo $oneDrive_File
-	echo "They differ. Checking to see which is newer."
+	echo "$local_file"
 	
+	echo "They differ. Checking to see which is newer."
+
 	if [ "$oneDrive_file" -nt "$local_file" ]
 	then
 		echo "OneDrive file is newer. Overwriting local."
-		cat [ "$oneDrive_file" >  "$local_file" ]
+
+	#TODO: "" doesn't work for cat operation. Need to modify filepath so that it substitutes the whitespace with a legal character (smh)
+
+		oneDrive_file_formatted=sed 's/\s\+'
+
+		echo $oneDrive_file_formatted
+
+		cp -i $oneDrive_file $local_file
 
 	#	echo "Deleting OneDrive file now."
 	#	rm -f "$oneDrive_file"
@@ -37,7 +45,7 @@ updateLocalFileToCurrentVersion(){
 
 
 deleteFile(){
-	fil_to_delete=$1
+	file_to_delete=$1
 	echo "deleting this file:"
 	echo $file_to_delete
 	rm -f  $file_to_delete
