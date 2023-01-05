@@ -1,8 +1,8 @@
 #!/bin/bash
 
-local_file=$(find ~/Documents -type f -name 'test_File_For_BASH.txt') 
+local_file=$(find ~/Documents -type f -name "test_File_For_BASH.txt") 
 
-oneDrive_file=$(find ~/OneDrive/Documents -type f -name 'test_File_For_BASH.txt')
+oneDrive_file=$(find ~/OneDrive/Documents -type f -name "test_File_For_BASH.txt")
 
 
 updateLocalFileToCurrentVersion(){
@@ -10,28 +10,28 @@ updateLocalFileToCurrentVersion(){
 	local_file=$1
 	oneDrive_file=$2
 
-
 	echo $local_file
-
 	echo $oneDrive_File
-
 	echo "They differ. Checking to see which is newer."
 	
-	if ("$oneDrive_file" -nt "$local_file") then
+	if [ "$oneDrive_file" -nt "$local_file" ]
+	then
 		echo "OneDrive file is newer. Overwriting local."
-		cat  "$oneDrive_file" >  "$local_file"
-		echo "Deleting OneDrive file now."
-		rm -f "$oneDrive_file"
+		cat [ "$oneDrive_file" >  "$local_file" ]
+
+	#	echo "Deleting OneDrive file now."
+	#	rm -f "$oneDrive_file"
 		#deleteFile '$oneDrive_file'
 
-	
-
-	else
+	elif [ "$local_file"  -nt "$oneDrive_file "]
+	then
 		echo "Local file is newer."
 		echo "Deleting OneDrive file now."
 		rm -f "$oneDrive_file"
 		#deleteFile '$oneDrive_file'
-
+	
+	else
+		echo "No change."
 	fi
 }
 
