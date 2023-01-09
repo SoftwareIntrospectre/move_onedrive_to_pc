@@ -1,12 +1,16 @@
 #!/bin/bash
 
-
 #local_file=$(find ~/Documents -type f -name "test_File_For_BASH.txt") 
-local_file=$(find ~/Documents -type f -name "sure_whatever_just_work_plox.txt") 
+local_file=$(find "C:/Users/Tony Chacon/Documents/_Me/test_File_For_Bash.txt") 
 
-#oneDrive_file=$(find ~/OneDrive/Documents -type f -name "test_File_For_BASH.txt")
+echo $local_file
 
-oneDrive_file=$(find ~/OneDrive/Documents -type f -name "sure_whatever_just_work_plox.txt")
+#local_file=$(find ~/Documents -type f -name "sure_whatever_just_work_plox.txt") 
+
+oneDrive_file=$(find ~/OneDrive/Documents -type f -name "test_File_For_BASH.txt")
+echo $oneDrive_file
+
+#oneDrive_file=$(find ~/OneDrive/Documents -type f -name "sure_whatever_just_work_plox.txt")
 
 
 updateLocalFileToCurrentVersion(){
@@ -35,7 +39,7 @@ updateLocalFileToCurrentVersion(){
 	#TODO: "" doesn't work for cat operation. Need to modify filepath so that it substitutes the whitespace with a legal character (smh)
 
 	#cp  "$oneDrive_file_formatted" "$local_file_formatted"
-	mv [ "$oneDrive_file" "$local_file" ]
+	mv "$oneDrive_file" "$local_file"
 	#	echo "Deleting OneDrive file now."
 	#	rm -f "$oneDrive_file"
 		#deleteFile '$oneDrive_file'
@@ -62,7 +66,7 @@ deleteFile(){
 
 if ! diff -rq "$local_file" "$oneDrive_file" 
 then
-	updateLocalFileToCurrentVersion "$local_File" "$oneDrive_file"
+	updateLocalFileToCurrentVersion "$local_file" "$oneDrive_file"
 else
 	echo "No differences."
 
