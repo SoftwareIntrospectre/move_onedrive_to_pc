@@ -51,4 +51,4 @@ Will use this for test purposes.
 12/16/2022 - find a way to compare files within the same directory (difference between OneDrive and Documents is that I need to ignore the "OneDrive" portion of it.)
 
 
-1/9/2023 - Looking to combine Bash and Python for this. Could make this project easier to complete.
+1/9/2023 - Looking to combine Bash and Python for this. Could make this project easier to complete....
