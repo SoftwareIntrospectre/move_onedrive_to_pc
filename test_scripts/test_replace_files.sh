@@ -44,7 +44,7 @@ updateLocalFileToCurrentVersion(){
 	#	rm -f "$oneDrive_file"
 		#deleteFile '$oneDrive_file'
 
-	elif [ "$local_file"  -nt "$oneDrive_file "]
+	elif [ "$local_file"  -nt "$oneDrive_file" ]
 	then
 		echo "Local file is newer."
 		echo "Deleting OneDrive file now."
@@ -64,7 +64,7 @@ deleteFile(){
 	rm -f  $file_to_delete
 }
 
-if ! diff -rq "$local_file" "$oneDrive_file" 
+if !  diff -rq "$local_file" "$oneDrive_file" 
 then
 	updateLocalFileToCurrentVersion "$local_file" "$oneDrive_file"
 else
