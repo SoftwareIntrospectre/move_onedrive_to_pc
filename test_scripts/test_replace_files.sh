@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#TODO: Test when either path is null. Create a logging file for this, and try/catch blocks with || logic.
+
+
 #local_file=$(find ~/Documents -type f -name "test_File_For_BASH.txt") 
 local_file=$(find "C:/Users/Tony Chacon/Documents/_Me/test_File_For_Bash.txt") 
 
@@ -35,8 +38,6 @@ updateLocalFileToCurrentVersion(){
 		
 		echo $oneDrive_file_formatted
 		echo $local_file_formatted
-
-	#TODO: "" doesn't work for cat operation. Need to modify filepath so that it substitutes the whitespace with a legal character (smh)
 
 	#cp  "$oneDrive_file_formatted" "$local_file_formatted"
 	mv "$oneDrive_file" "$local_file"
